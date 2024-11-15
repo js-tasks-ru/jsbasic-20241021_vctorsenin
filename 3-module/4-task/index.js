@@ -1,10 +1,6 @@
 function showSalary(users, age) {
-  let nam = [];
-  for (let key of users){
-    if (key.age <= age){
-      nam.push (`${key.name}, ${key.balance}`);
-    }
-  }
-  nam = nam.join("\n");
-  return nam;
+  users= users.filter((elem) => elem.age<=age)  
+  users = users.map(elem => `${elem.name}, ${elem.balance}`  )
+  users = users.join("\n");
+  return users;
 }

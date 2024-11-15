@@ -1,11 +1,11 @@
 function camelize(str) {
   str = str.split("-");
-  str.forEach((elem,b) => {
-    if (b>0){
-      elem=elem[0].toUpperCase() + elem.substr(1);
-      str[b]=elem;
+  const str2 = str.map((item, index) => {
+    if (index>0){
+      item=item[0].toUpperCase() + item.substr(1);
     }
-  });
-  str=str.join("");
-  return str
+    str[index]=item; 
+  })
+  str = str.join("")
+  return str 
 }
