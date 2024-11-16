@@ -1,3 +1,4 @@
 function namify(users) {
-  // ваш код...
+  const lox = users.map((elem) => elem.name ) 
+  return lox
 }
